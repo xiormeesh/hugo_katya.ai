@@ -1,0 +1,3 @@
+[submodule "themes/aerial"]
+	path = themes/aerial
+	url = git@github.com:xiormeesh/aerial.git

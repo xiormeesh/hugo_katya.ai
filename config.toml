@@ -1,0 +1,32 @@
+languageCode = "en-us"
+title = "katya.ai"
+baseurl = "http://katya.ai/"
+theme = "aerial"
+
+[params]
+  name = "katya.ai"
+  about = "Mad Data Scientist &nbsp;&bull;&nbsp; White hat &nbsp;&bull;&nbsp; Life-long learner"
+  copyright = "Katya Gordeeva"
+  #Disable the scrolling background by entering any string for bg_scroll. Enable by leaving bg_scroll empty.
+  bg_scroll = ""
+  favicon = "favicon.ico"
+
+[[params.social]]
+  medium = "LinkedIn"
+  icon = "fab fa-linkedin"
+  link = "https://www.linkedin.com/in/katya-gordeeva"
+
+[[params.social]]
+  medium = "Github"
+  icon = "fab fa-github"
+  link = "https://github.com/xiormeesh"
+
+[[params.social]]
+  medium = "Kaggle"
+  icon = "fab fa-kaggle"
+  link = "https://www.kaggle.com/xiormeesh"
+
+[[params.social]]
+  medium = "Instagram"
+  icon = "fab fa-instagram"
+  link = "https://instagram.com/xiormeesh"
