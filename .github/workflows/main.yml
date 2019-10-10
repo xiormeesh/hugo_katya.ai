@@ -10,10 +10,11 @@ jobs:
     
     steps:
 
-    - name: checkout repo
+    - name: 1. checkout repo
       uses: actions/checkout@master
 
-    - name: build and deploy the files to a GCP bucket
+    - name: 2. build and deploy the files to a GCP bucket
       uses: ./action-a
       env: 
-        GCP_DEPLOY_KEY: ${{ secrets.GCP_DEPLOY_KEY }}
+        PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID}}
+        APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
