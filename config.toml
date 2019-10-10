@@ -27,6 +27,16 @@ theme = "aerial"
   link = "https://www.kaggle.com/xiormeesh"
 
 [[params.social]]
+  medium = "Bandcamp"
+  icon = "fab fa-bandcamp"
+  link = "https://bandcamp.com/xiormeesh"
+
+[[params.social]]
+  medium = "Goodreads"
+  icon = "fab fa-goodreads"
+  link = "https://www.goodreads.com/xiormeesh"
+
+[[params.social]]
   medium = "Instagram"
   icon = "fab fa-instagram"
   link = "https://instagram.com/xiormeesh"
