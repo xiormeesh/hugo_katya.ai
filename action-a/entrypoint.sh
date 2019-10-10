@@ -4,27 +4,23 @@ set -e
 set -x
 set -o pipefail
 
-echo "== the code of the repo should be checked out here: =="
-ls themes/aerial/
-
+echo "== pulling aerial theme: =="
 git submodule update --init
 ls themes/aerial/
 
-cat config.toml
-
-# hugo build
 echo "== running hugo to generate /public folder =="
 hugo
-
 ls public/
 
 # upload /publish folder to GCP bucket, i need to store credentials somewhere
 echo "== authenticating in GCP =="
-echo $GCP_PROJECT_ID
-echo $GCP_APPLICATION_CREDENTIALS
+
+echo "$GCLOUD_AUTH" | base64 --decode > "$HOME"/gcloud.json
+sh -c "gcloud auth activate-service-account --key-file=$HOME/gcloud.json $*"
 
 
-echo "== uploading /public folder llto the bucket... =="
+echo "== uploading /public folder to the bucket... =="
+sh -c "gsutil -m cp -r public/* gs://katya.ai"
 
 
 echo "== uploaded /public folder to the bucket =="

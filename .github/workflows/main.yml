@@ -9,12 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-
-    - name: 1. checkout repo
-      uses: actions/checkout@master
-
-    - name: 2. build and deploy the files to a GCP bucket
+    - name: 1. build and deploy the files to a GCP bucket
       uses: ./action-a
       env: 
-        PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID}}
-        APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+        GCLOUD_AUTH: ${{secrets.GCLOUD_AUTH}}
