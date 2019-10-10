@@ -1,0 +1,19 @@
+name: Deploy katya.ai to GCP bucket
+
+on: push
+
+jobs:
+
+  build-deploy:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+
+    - name: checkout repo
+      uses: actions/checkout@master
+
+    - name: build and deploy the files to a GCP bucket
+      uses: ./action-a
+      env: 
+        GCP_DEPLOY_KEY: ${{ secrets.GCP_DEPLOY_KEY }}
