@@ -17,6 +17,7 @@ RUN apk add --no-cache \
 	make \
 	musl \
 	musl-dev \
+	google-cloud-sdk \
 	git
 
 RUN git clone https://github.com/gohugoio/hugo.git /hugo
