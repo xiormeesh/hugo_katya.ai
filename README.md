@@ -45,3 +45,13 @@ create a bucket and make it public
   - generating static files
   - authenticating using secret (decoding back from base64)
   - uploading files using gsutil
+
+## 4. Keeping dependencies up to date
+
+- when a submodule is updated:
+
+
+```
+cd SUBMODULE_FOLDER
+git pull
+```
