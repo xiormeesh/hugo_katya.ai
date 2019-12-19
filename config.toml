@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "katya.ai"
-baseurl = "http://katya.ai/"
+baseurl = "katya.ai"
 theme = "aerial"
 
 [params]
